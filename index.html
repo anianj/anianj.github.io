@@ -9,24 +9,111 @@
 
     <!-- Bootstrap -->
     <link href="app/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="app/css/anianj.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-    <div class="container-fluid">
-        Hello
+    <div class="">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img src="app/css/anianj-logo.png" alt="another.nianj logo" />
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#" title="#">PROJECTS</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">BLOG</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="#">ABOUT</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a class="navbar-link" href="#" title="#">Gmail</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jumbotron starts -->
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron col-sm-10 col-sm-offset-1">
+                    <h2>Hello, this is nianj</h2>
+                    <p>
+                        nianj is a web developer lives in chengdu,China.
+                        <br />
+                        nianj works for Symantec now, and in his spare time, he works on some
+                        <br />
+                        interesting gadgets.
+                        <br />
+                        nainj is married and has a dog.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- project navbar starts-->
+        <div class="navbar navbar-projects">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="navbar-brand" href="#">try my works &gt;</span>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav" nj-switcher on ='projects'>
+                                <li nj-swt-item val="1">
+                                    <a href="#" title="#">nj-switcher</a>
+                                </li>
+                                <li nj-swt-item val="2">
+                                    <a href="#" title="#">nj-floater</a>
+                                </li>
+                                <li nj-swt-item val="3">
+                                    <a href="#" title="#">omxromote</a>
+                                </li>
+                                 <li nj-swt-item val="4">
+                                    <a href="#" title="#">(under construction)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!--Include all compiled plugins (below), or include individual files as needed -->
+    <script src="app/js/bootstrap.min.js"></script>
 </body>
 
 </html>
