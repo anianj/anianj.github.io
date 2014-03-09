@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="anianj.io">
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body ng-controller="mainCtrl">
     <div class="">
         <div class="navbar navbar-default">
             <div class="container">
@@ -49,7 +49,7 @@
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a class="navbar-link" href="#" title="#">Gmail</a>
+                                    <a class="navbar-link" href="#" title="another.nianj#gmail.com">Gmail</a>
                                 </li>
                             </ul>
                         </div>
@@ -64,12 +64,9 @@
                     <h2>Hello, this is nianj</h2>
                     <p>
                         nianj is a web developer lives in chengdu,China.
-                        <br />
-                        nianj works for Symantec now, and in his spare time, he works on some
-                        <br />
-                        interesting gadgets.
-                        <br />
-                        nainj is married and has a dog.
+                        <br />nianj works for Symantec now, and in his spare time, he works on some
+                        <br />interesting gadgets.
+                        <br />nainj is married and has a dog.
                     </p>
                 </div>
             </div>
@@ -89,18 +86,27 @@
                             <span class="navbar-brand" href="#">try my works &gt;</span>
                         </div>
                         <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav" nj-switcher on ='projects'>
-                                <li nj-swt-item val="1">
-                                    <a href="#" title="#">nj-switcher</a>
+                            <ul class="nav navbar-nav" nj-switcher on='projects' pp="{{'b'}}">
+                                <li nj-switcher-item val="{{'nj-switcher'}}">
+                                    <a href="" title="#">
+                                        <span class="glyphicon glyphicon-sound-stereo"></span>
+                                        nj-switcher
+                                    </a>
                                 </li>
-                                <li nj-swt-item val="2">
-                                    <a href="#" title="#">nj-floater</a>
+                                <li nj-switcher-item val="{{'nj-floater'}}">
+                                    <a href="" title="#">nj-floater</a>
                                 </li>
-                                <li nj-swt-item val="3">
-                                    <a href="#" title="#">omxromote</a>
+                                <li nj-switcher-item val="{{'omxremote'}}">
+                                    <a href="" title="#">
+                                        <span class="glyphicon glyphicon-off"></span>
+                                        omxremote
+                                    </a>
                                 </li>
-                                 <li nj-swt-item val="4">
-                                    <a href="#" title="#">(under construction)</a>
+                                <li nj-switcher-item val="{{'timeruler'}}">
+                                    <a href="" title="#">
+                                        <span class="glyphicon glyphicon-time"></span>
+                                        timeruler
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -108,12 +114,100 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron projects-jumbotron col-sm-10 col-sm-offset-1" ng-switch on="projects">
+                    <div ng-switch-when="nj-switcher">
+                        <div class="row">
+                            <h3 class="col-sm-5">nj-switcher
+                                <small>---- an AngularJS Directive</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p class="col-sm-10">
+                                <a href="http://angularjs.org/">AngularJs</a> is a powerful open sourced web frontend framewok by Google
+                                <br/>It has a buildin Directive called "ng-switch", witch can be used to conditionally swap your elements on a scope expression.
+                                <br/>
+                                <br/>So nj-switcher is another Directive, "try my works" bar is a live demo of it. You can play with it to see how it works, if you like, you can also use it in your project. You can get it from <a href="https://github.com/anianj/angular-anianj">Github</a>
+                                <br/>But it's nianj's first homework of leanring AngularJS, so it's a rough one and now at version 0.1. If you need help, send nianj a
+                                <br/>
+                                <span class="text-danger">email:</span>another.nianj#gmail dot com.
+                            </p>
+                            <img class="col-sm-2" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUlIhLo3sdRoCKirJgsCoPRIU79Sgf1oJziEFwGxetyh5lN3k1Pg" />
+                        </div>
+                    </div>
+                    <div ng-switch-when="nj-floater">
+                        <div class="row">
+                            <h3 class="col-sm-5">nj-floater
+                                <small>---- another AngularJS Directive</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p class="col-sm-10">
+                                <a href="http://angularjs.org/">AngularJs</a> is a powerful open sourced web frontend framewok by Google
+                                <br/>So nj-floater is another Directive, but it's just a plan in nianj's head.
+                            </p>
+                            <img class="col-sm-2" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUlIhLo3sdRoCKirJgsCoPRIU79Sgf1oJziEFwGxetyh5lN3k1Pg" />
+                        </div>
+                    </div>
+                    <div ng-switch-when="omxremote">
+                        <div class="row">
+                            <h3 class="col-sm-5">omxremote
+                                <small>---- another plan in nianj's head</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p class="col-sm-10">
+                                HeiHei~ <span class="glyphicon glyphicon-heart" style="color:red"></span>
+                            </p>
 
+                        </div>
+                    </div>
+                     <div ng-switch-when="timeruler">
+                        <div class="row">
+                            <h3 class="col-sm-5">timeruler
+                                <small>---- a big plan in nianj's head</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p class="col-sm-10">
+                                Good~ <span class="glyphicon glyphicon-thumbs-up"></span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr/>
+            <p class="text-muted center-block" style="width:10%">
+                <small>another.nianj ©2014</small>
+            </p>
+        </div>
+    </div>
+    <script src="app/lib/angular/angular.js"></script>
+    <script src="app/lib/ngSwitcher.js"></script>
+    <script>
+    /**
+     * anianj-io Module
+     *
+     * Description
+     */
+    angular.module('anianj.io', ['anianj.ui']).config(['$logProvider',
+        function moduleConfiger($logProvider) {
+            $logProvider.debugEnabled(true);
+        }
+    ]).controller('mainCtrl', ['$log', '$scope',
+        function mainCtrlConstructor($log, $scope) {
+            $scope.projects = 'nj-switcher';
+        }
+    ]);
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!--Include all compiled plugins (below), or include individual files as needed -->
-    <script src="app/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="app/lib/bootstrap.min.js"></script> -->
 </body>
 
 </html>
