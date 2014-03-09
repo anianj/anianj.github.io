@@ -1,7 +1,12 @@
-html,body{
-	font-family: Helvetica;
-}
 
+html, body {
+    font-family: Helvetica;
+}
+@media (min-width: 1600px) {
+    .col-xlg-offset-1 {
+        margin-left: 8.33%;
+    }
+}
 /* navbar */
  .navbar-default {
     border: 0;
@@ -49,21 +54,19 @@ html,body{
 }
 /* nj-switcher */
  .nj-switcher-pointer {
- 	font-family: 'Glyphicons Halflings';
+    font-family:'Glyphicons Halflings';
     position: absolute;
     color:#418BCB;
     width: 20px;
     height: 20px;
 }
-.nj-switcher-pointer:before{
-	font-size: 20px;
-	content: "\e094";
+.nj-switcher-pointer:before {
+    font-size: 20px;
+    content:"\e094";
 }
 .pointer-b {
     bottom:-5px;
 }
-
 /* projects-jumbotron */
-.projects-jumbotron{
-
+ .projects-jumbotron {
 }
