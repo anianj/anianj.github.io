@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Another.Nianj</title>
+    <title>another.nianj</title>
 
     <!-- Bootstrap -->
     <link href="app/css/bootstrap.min.css" rel="stylesheet">
@@ -116,8 +116,8 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="jumbotron projects-jumbotron col-sm-10 col-sm-offset-1" ng-switch on="projects">
-                    <div ng-switch-when="nj-switcher">
+                <div class="jumbotron projects-switch-container col-sm-10 col-sm-offset-1" ng-switch on="projects">
+                    <div class="project-switch" ng-switch-when="nj-switcher">
                         <div class="row">
                             <h3 class="col-sm-5">nj-switcher
                                 <small>---- an AngularJS Directive</small>
@@ -136,7 +136,7 @@
                             <img class="col-sm-2" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUlIhLo3sdRoCKirJgsCoPRIU79Sgf1oJziEFwGxetyh5lN3k1Pg" />
                         </div>
                     </div>
-                    <div ng-switch-when="nj-floater">
+                    <div class="project-switch" ng-switch-when="nj-floater">
                         <div class="row">
                             <h3 class="col-sm-5">nj-floater
                                 <small>---- another AngularJS Directive</small>
@@ -150,20 +150,21 @@
                             <img class="col-sm-2" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUlIhLo3sdRoCKirJgsCoPRIU79Sgf1oJziEFwGxetyh5lN3k1Pg" />
                         </div>
                     </div>
-                    <div ng-switch-when="omxremote">
+                    <div class="project-switch" ng-switch-when="omxremote">
                         <div class="row">
-                            <h3 class="col-sm-5">omxremote
+                            <h3 class="col-sm-6">omxremote
                                 <small>---- another plan in nianj's head</small>
                             </h3>
                         </div>
                         <div class="row">
                             <p class="col-sm-10">
-                                HeiHei~ <span class="glyphicon glyphicon-heart" style="color:red"></span>
+                                HeiHei~
+                                <span class="glyphicon glyphicon-heart" style="color:red"></span>
                             </p>
 
                         </div>
                     </div>
-                     <div ng-switch-when="timeruler">
+                    <div class="project-switch" ng-switch-when="timeruler">
                         <div class="row">
                             <h3 class="col-sm-5">timeruler
                                 <small>---- a big plan in nianj's head</small>
@@ -171,7 +172,8 @@
                         </div>
                         <div class="row">
                             <p class="col-sm-10">
-                                Good~ <span class="glyphicon glyphicon-thumbs-up"></span>
+                                Good~
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
                             </p>
 
                         </div>
@@ -187,14 +189,15 @@
         </div>
     </div>
     <script src="app/lib/angular/angular.js"></script>
-    <script src="app/lib/ngSwitcher.js"></script>
+    <script src="app/lib/angular/angular-animate.js"></script>
+    <script src="app/lib/njSwitcher.js"></script>
     <script>
     /**
      * anianj-io Module
      *
      * Description
      */
-    angular.module('anianj.io', ['anianj.ui']).config(['$logProvider',
+    angular.module('anianj.io', ['ngAnimate', 'anianj.ui']).config(['$logProvider',
         function moduleConfiger($logProvider) {
             $logProvider.debugEnabled(true);
         }

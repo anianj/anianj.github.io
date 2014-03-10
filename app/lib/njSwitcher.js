@@ -5,8 +5,8 @@
  *
  * Description
  */
-angular.module('anianj.ui', []).directive('njSwitcher', ['$log',
-    function($log) {
+angular.module('anianj.ui', []).directive('njSwitcher', ['$log','$animate',
+    function($log,$animate) {
         // Runs during compile
         return {
             // name: '2',
@@ -62,7 +62,7 @@ angular.module('anianj.ui', []).directive('njSwitcher', ['$log',
 
                     // append the transcluded the content of switcher
                     transclude(scope.$parent,function(clone) {
-                        elm.prepend(clone);
+                        elm.append(clone);
                     })
 
 
